@@ -1,0 +1,399 @@
+﻿@{
+    ViewData["Title"] = "Swordfish";
+}
+
+<div class="visible" id="home">
+
+    <div class="row text-center">
+        <h2>Welcome to Build-A-Better-Bot!</h2>
+        <h3>To begin your journey to robotics proficiency, select a project below!</h3>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-lg-4">
+            <div class="panel panel-default mainPanel" id="armstart" onmouseover="" style="cursor: pointer;" onclick="pickPath(arminfo,0)">
+                <h3>Robotic Arm</h3>
+                <img src="~/images/ArmSil.png" height="180" width="180" />
+                <h4 class="text-center text-pad">Difficulty: Easy</h4>
+                <h4 class="text-center text-pad">Requires minimal parts</h4>
+                <h4 class="text-center text-pad">Deals with lifting weight, claw grip, and degrees of motion</h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default mainPanel" id="dronestart" onmouseover="" style="cursor: pointer;" onclick="pickPath(droneinfo,1)">
+                <h3>Drone</h3>
+                <img src="~/images/DroneSil.png" height="180" width="180" />
+                <h4 class="text-center text-pad">Difficulty: Medium</h4>
+                <h4 class="text-center text-pad">Requires several parts</h4>
+                <h4 class="text-center text-pad">Deals with weight management, component connectivity, and video quality</h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default mainPanel" id="autostart" onmouseover="" style="cursor: pointer;" onclick="pickPath(autoinfo,2)">
+                <h3>Autonomous Vehicle</h3>
+                <img src="~/images/AutoSil.png" height="180" width="180" />
+                <h4 class="text-center text-pad">Difficulty: Hard</h4>
+                <h4 class="text-center text-pad">Requires many parts</h4>
+                <h4 class="text-center text-pad">Deals with power management, sensor synergy, and functionality of camera</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden" id="arminfo">
+    <h2>Robotic Arm Information</h2>
+    <div class="row text-center">
+        <div class="col-lg-8">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="~/images/realarm.jpg" height="250" width="300" />
+                    </div>
+                    <div class="col-md-7">
+                        <ul>
+                            <li>Description of the robot</li>
+                            <li>Reason to make the robot</li>
+                            <li>Average price range</li>
+                            <li>Reason behind difficulty</li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="armback" onclick="backHome(arminfo)">Back</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="armstart" onclick="startbuild(arminfo)">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="well">
+                <h3>Robotic Arm</h3>
+                <img src="~/images/ArmSil.png" height="170" width="170" />
+                <h4 class="text-center">Difficulty: Easy</h4>
+                <h4 class="text-center">Requires minimal parts</h4>
+                <h4 class="text-center">Deals with lifting weight, claw grip, and degrees of motion</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden" id="droneinfo">
+    <h2>Drone Information</h2>
+    <div class="row text-center">
+        <div class="col-lg-8">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="~/images/realdrone.PNG" height="250" width="300" />
+                    </div>
+                    <div class="col-md-7">
+                        <ul>
+                            <li>Description of the robot</li>
+                            <li>Reason to make the robot</li>
+                            <li>Average price range</li>
+                            <li>Reason behind difficulty</li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="droneback" onclick="backHome(droneinfo)">Back</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="dronestart" onclick="startbuild(droneinfo);">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="well">
+                <h3>Drone</h3>
+                <img src="~/images/DroneSil.png" height="170" width="170" />
+                <h4 class="text-center">Difficulty: Medium</h4>
+                <h4 class="text-center">Requires several parts</h4>
+                <h4 class="text-center">Deals with weight management, component connectivity, and video quality</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden" id="autoinfo">
+    <h2>Autonomous Vehicle Information</h2>
+    <div class="row text-center">
+        <div class="col-lg-8">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="~/images/realauto.jpg" height="250" width="300" />
+                    </div>
+                    <div class="col-md-7">
+                        <ul>
+                            <li>Description of the robot</li>
+                            <li>Reason to make the robot</li>
+                            <li>Average price range</li>
+                            <li>Reason behind difficulty</li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="autoback" onclick="backHome(autoinfo)">Back</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-lg" id="autostart" onclick="startbuild(autoinfo)">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="well">
+                <h3>Autonomous Vehicle</h3>
+                <img src="~/images/AutoSil.png" height="170" width="170" />
+                <h4 class="text-center">Difficulty: Hard</h4>
+                <h4 class="text-center">Requires many parts</h4>
+                <h4 class="text-center">Deals with power management, sensor synergy, and functionality of camera</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="build" class="hidden">
+    <div class="build">
+        <h2>Please Select Your Components</h2>
+    </div>
+
+    <!--NavBar for component Steps-->
+    <div class="build">
+        <ul class="nav nav-tabs">
+            <li id="stepBut0" onclick="prevComp()" onmouseover="" style="cursor:pointer;">
+                <a data-toggle="tab">Previous</a>
+            </li>
+            <li class="active">
+                <a data-toggle="tab"><p id="stepButWild"></p></a>
+            </li>
+            <li id="stepBut2" onclick="nextComp()" onmouseover="" style="cursor:pointer;">
+                <a data-toggle="tab">Next</a>
+            </li>
+            <li id="stepBut3" onclick="showResults()" onmouseover="" style="cursor:pointer;">
+                <a data-toggle="tab">Results</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="build">
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>Please select your desired frame material</h3>
+                <div class="row divSpacer">
+                    <!--Build image, and component image/specs-->
+                    <div class="col-sm-6">
+                        <div height="800"></div>
+                        <div class="panel-body" id="backImage" style="position:absolute;">
+                            <img src="~/images/DroneSil.png" height="350">
+                        </div>
+                        <form id="compDescImg" class="hidden">
+                            <div class="div-table">
+                                <div class="div-table-row">
+                                    <div class="div-table-col-sm"><h2 class="compPopUpName"></h2></div>
+                                    <div class="div-table-col-lg"><h3>Specifications</h3></div>
+                                </div>
+                                <div class="div-table-row">
+                                    <div class="div-table-col-sm">
+                                        <img class="compImg" src="~/images/drone.png" width="200">
+                                    </div>
+                                    <div class="div-table-col-lg">THIS WILL BE THE SPEC SHEET</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--component list on component page-->
+                    <div class="col-sm-6">
+                        <div class="panel-group group">
+                            <div class="panel panel-info compClass" onmouseover="componentHover(0)" onclick="selectComp(0)" style="cursor: pointer;">
+                                <div class="panel-heading">
+                                    <h4 class="compName"></h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="compDescr"></p>
+                                </div>
+                            </div>
+                            <div class="panel panel-info compClass" onmouseover="componentHover(1)" onclick="selectComp(1)" style="cursor: pointer; ">
+                                <div class="panel-heading">
+                                    <h4 class="compName"></h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="compDescr"></p>
+                                </div>
+                            </div>
+                            <div class="panel panel-info compClass" onmouseover="componentHover(2)" onclick="selectComp(2)" style="cursor: pointer; ">
+                                <div class="panel-heading">
+                                    <h4 class="compName"></h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="compDescr"></p>
+                                </div>
+                            </div>
+                            <div class="panel panel-info compClass" onmouseover="componentHover(3)" onclick="selectComp(3)" style="cursor: pointer; ">
+                                <div class="panel-heading">
+                                    <h4 class="compName"></h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="compDescr"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="results" class="hidden">
+    <div class="row text-center">
+        <div class="col-lg-4">
+            <div class="well">
+                <h3>Your picks:</h3>
+                <table class="table table-striped" id="frameres" style="font-weight: 300;">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Component</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Frame</td>
+                            <td>Aluminum</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>12 V</td>
+                        </tr>
+                        <tr>
+                            <td>Wheel</td>
+                            <td>12 inch</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                        <tr>
+                            <td>Example Part</td>
+                            <td>Example Component</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="well text-center">
+                <h2>Results</h2>
+            </div>
+            <div class="panel panel-default">
+                <h4>Total price: $1</h4>
+                <h4>More Voltage</h4>
+                <p>
+                    You picked a battery with a small voltage which will result in a difficult power management with parts
+                    A, B, C
+                </p>
+                <h4>Higher Quality Cameras</h4>
+                <p>You may find difficulty in getting the good lidar to work with cheap cameras</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .opClass {
+        opacity: .5;
+    }
+
+    .compClass {
+        display: none;
+    }
+
+    .text-pad {
+        padding-top: 10px;
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+
+    .mainPanel {
+        height: 420px;
+    }
+
+    .div-table {
+        display: table;
+        width: auto;
+        background-color: whitesmoke;
+        border: 1px solid #666666;
+        border-spacing: 5px; /* cellspacing:poor IE support for  this */
+    }
+
+    .div-table-row {
+        display: table-row;
+        width: auto;
+        clear: both;
+    }
+
+    .div-table-col-sm {
+        float: left; /* fix for  buggy browsers */
+        display: table-column;
+        width: 205px;
+        background-color: whitesmoke;
+        padding-left: 5px;
+    }
+
+    .div-table-col-lg {
+        float: left; /* fix for  buggy browsers */
+        display: table-column;
+        width: 300px;
+        background-color: whitesmoke;
+        padding-left: 5px;
+    }
+    .divSpacer {
+        height: 400px;
+    }
+    .divSpacerSm {
+
+    }
+</style>

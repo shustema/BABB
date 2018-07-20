@@ -1,0 +1,11 @@
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\bin\Debug\netcoreapp2.0\dotnetcore-sample.deps.json
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\bin\Debug\netcoreapp2.0\dotnetcore-sample.runtimeconfig.json
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\bin\Debug\netcoreapp2.0\dotnetcore-sample.runtimeconfig.dev.json
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\bin\Debug\netcoreapp2.0\dotnetcore-sample.dll
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\bin\Debug\netcoreapp2.0\dotnetcore-sample.pdb
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.csprojResolveAssemblyReference.cache
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.csproj.CoreCompileInputs.cache
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.AssemblyInfoInputs.cache
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.AssemblyInfo.cs
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.dll
+C:\Users\Michael Shuster\Source\Repos\BABB Repository\dotnetcore-sample\obj\Debug\netcoreapp2.0\dotnetcore-sample.pdb
